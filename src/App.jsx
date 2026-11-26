@@ -1,6 +1,9 @@
 
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import projectOne from "./images/project-one.png";
+import projectTwo from "./images/project-two.png";
+import projectThree from "./images/project-three.png";
 import "./index.css";
 
 // NAVIGATION
@@ -8,7 +11,7 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
-
+  
   return (
     <nav className="navbar">
       <a href="#home" className="logo" onClick={closeMenu}>
@@ -86,19 +89,19 @@ function Projects() {
       number: "01",
       title: "Event & Church Posters",
       category: "POSTER DESIGN",
-      style: "project-one"
+      image: projectOne
     },
     {
       number: "02",
-      title: "Business Advertising",
+      title: "Business Advertising / Promotional Flyers",
       category: "ADVERTISING DESIGNS",
-      style: "project-two"
+      image: projectTwo
     },
     {
       number: "03",
-      title: "Promotional Flyers",
-      category: "FLYER DESIGN",
-      style: "project-three"
+      title: "Logo Design & Brand Identity",
+      category: "LOGO DESIGN",
+      image: projectThree
     }
   ];
 
@@ -122,15 +125,19 @@ function Projects() {
         {projects.map((project) => (
           <article className="project-card" key={project.number}>
 
-            <div className={`project-image ${project.style}`}>
-              <span className="project-number">
+         <div className="project-image">
+          {/* Blurredbackground */}
+
+          <img src={project.image} className="project-bg" alt="" aria-hidden="true"/>
+          
+          {/*Main Image*/}
+          
+             <img src={project.image} alt={project.title} />
+
+              <span className="project-number"> 
                 {project.number}
               </span>
-
-              <span className="project-placeholder">
-                EMMANUEL.
-              </span>
-            </div>
+         </div>
 
             <div className="project-info">
               <div>
@@ -198,7 +205,8 @@ function Services() {
   const services = [
     ["01", "Flyer Design", "Creative flyers that communicate your message."],
     ["02", "Poster Design", "Eye-catching posters for events and promotions."],
-    ["03", "Advertising Design", "Visual adverts that help brands stand out."]
+    ["03", "Advertising Design", "Visual adverts that help brands stand out."],
+    ["04", "Logo Design & Brand Identity", "Professional design that helps your to be remembered"]
   ];
 
   return (
@@ -252,7 +260,9 @@ function Contact() {
       <div className="contact-buttons">
 
         <a
-          href="https://wa.me/260YOURNUMBER"
+          href={`https://wa.me/263784678867?text=${encodeURIComponent(
+            "Hi Emmanuel! 👋\n\nI came across your website and I'm interested in your design services.\n\nI'd like to discuss a project with you.\n\nProject type:{Enter project type here}\nBusiness/Brand name:{Enter your name Here}\nProject details:{Enter the details here}\n\nLooking forward to hearing from you!"
+          )}`}
           target="_blank"
           rel="noreferrer"
           className="primary-button"
@@ -261,7 +271,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://instagram.com/YOUR_USERNAME"
+          href="https://instagram.com/_emm_tin_madz_"
           target="_blank"
           rel="noreferrer"
           className="social-button"
@@ -270,7 +280,7 @@ function Contact() {
         </a>
 
         <a
-          href="https://facebook.com/YOUR_USERNAME"
+          href="https://facebook.com/emm.tin.madz"
           target="_blank"
           rel="noreferrer"
           className="social-button"
@@ -362,6 +372,7 @@ function Home() {
 }
 
 // APPLICATION
+
 function App() {
   return (
     <BrowserRouter>

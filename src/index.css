@@ -132,7 +132,7 @@ button {
   background:
   radial-gradient(
     ellipse at 80% 30%,
-    rgba(249, 114, 31, 0.215),
+    rgba(250, 103, 11, 0.215),
     transparent 50%
   );
 }
@@ -161,7 +161,7 @@ button {
 }
 
 .hero h1 span {
-  color: #77777e;
+  color: var(--accent);
 }
 
 .hero-description {
@@ -242,15 +242,42 @@ button {
 }
 
 .project-image {
-  height: 350px;
-  background: #202025;
+  height: 360px;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  isolation: isolate;
+  background: #1c1c20;
 }
 
+.project-bg{
+position: absolute;
+background-color: #ffffff;
+inset: 0;
+width: calc(100% + 30px);
+height: calc(100% + 30px);
+object-fit: cover;
+filter: blur(18px) brightness(0.85);
+z-index: -1;
+}
+
+.project-main{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+  display: block;
+}
+.project-image img{
+  width: 100%;
+  height: 97%;
+  object-fit: contain;
+  display: block;
+}
 .project-one {
   background: linear-gradient(135deg, #25273d, #60617d);
 }
@@ -265,9 +292,11 @@ button {
 
 .project-number {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 12px;
+  top: 25px;
+  left: 30px;
+  z-index: 2;
+  color:white;
+  font-size: 16px;
 }
 
 .project-placeholder {
