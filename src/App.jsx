@@ -269,7 +269,7 @@ function Contact() {
 
         <a
           href={`https://wa.me/263784678867?text=${encodeURIComponent(
-            "Hi Emmanuel! 👋\n\nI came across your website and I'm interested in your design services.\n\nI'd like to discuss a project with you.\n\nProject type: {Enter project type here}\n\nBusiness/Brand name: {Enter your name Here}\n\nProject details: {Enter the details here}\n\nLooking forward to hearing from you!"
+            "Hi Emmanuel! 👋\n\nI came across your website and I'm interested in your design services.\n\nLooking forward to hearing from you!"
           )}`}
           target="_blank"
           rel="noreferrer"
