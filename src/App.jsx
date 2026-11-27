@@ -53,17 +53,18 @@ function Hero() {
         </p>
 
         <h1>
-          I CREATE VISUALS
+          YOUR BRAND.
           <br />
-          THAT MAKE BRANDS
+          MY DESIGN.
           <br />
-          <span>STAND OUT.</span>
+          <span>EVERYONE TALKING.</span>
         </h1>
 
         <p className="hero-description">
-          I'm Emmanuel, a graphic designer creating
-          impactful flyers, posters and advertising
-          visuals that communicate and convert.
+          I'm Emmanuel, a designer behind MANT.
+          I make flyers, posters & websites for
+          brands in Southern Africa that want to
+          look premium - not cheap.
         </p>
 
         <a href="#work" className="primary-button">
@@ -72,7 +73,7 @@ function Hero() {
       </div>
 
       <div className="hero-bottom">
-        <span>BASED IN ZAMBIA & ZIMBABWE</span>
+        <span>BASED IN SOUTHERN AFRICA</span>
         <span>GRAPHIC DESIGNER / VISUAL CREATIVE / WEB DEVELOPER</span>
         <span>SCROLL TO EXPLORE ↓</span>
       </div>
@@ -111,12 +112,13 @@ function Projects() {
       <div className="section-heading">
         <div>
           <p className="eyebrow">01 / SELECTED WORK</p>
-          <h2>Designs that speak.</h2>
+          <h2>Work that makes people stop scrolling.</h2>
         </div>
 
         <p className="section-description">
-          A collection of creative projects
-          built to capture attention.
+          I don't just make pretty flyers. I make posters 
+          for businesses, churches & events around Sourthen Africa 
+          that people actually share.
         </p>
       </div>
 
@@ -167,25 +169,31 @@ function About() {
       <div className="about-content">
 
         <h2>
-          Good design isn't just
-          about looking good.
-          It's about <span>making
-          an impact.</span>
+          I don't make pretty design. <span>I make
+          design that works.</span>
         </h2>
 
         <div className="about-text">
           <p>
-            I'm Emmanuel, a graphic designer and
-            BSc ICT student passionate about the
-            intersection of creativity and technology 
-            in the business world.
+            I'm Emmanuel, a graphic designer +
+            BSc ICT student building MANT Technologies.
           </p>
 
           <p>
-            I specialise in creating flyers, posters, 
-            advertising visuals as well as Websites 
-            that help businesses communicate their 
-            message effectively.
+            I started designing because I saw too many good
+            businesses in Africa with cheap-looking flyers. 
+            Good church, good food, good service -  but the 
+            poster was killing them.
+          </p>
+
+          <p>
+            So I fix that. I make posters, brands & websites 
+            that make people stop, look, and say "Who made this?"
+          </p>
+
+          <p>
+            If your flyer is not getting you clients, it's not the 
+            business. It's the design. Let me fix it.
           </p>
 
           <a href="#contact" className="text-link">
@@ -203,10 +211,9 @@ function About() {
 function Services() {
 
   const services = [
-    ["01", "Flyer Design", "Creative flyers that communicate your message."],
-    ["02", "Poster Design", "Eye-catching posters for events and promotions."],
-    ["03", "Advertising Design", "Visual adverts that help brands stand out."],
-    ["04", "Logo Design & Brand Identity", "Professional design that helps your to be remembered"]
+    ["01", "Posters & Flyers that pack events", "Church programs, concerts, weddings, sales. I make posters people share on WhatsApp status the same day."],
+    ["02", "Logo & Brand Identity", "Not just a logo. Full brand -  colours, fonts, t-shirt, social templates. Like I did for Elara Guides & Bites by Tabs."],
+    ["03", "Websites That Sell", "Simple, fast websites for small businesses that make you look like a big brand. Portfolio, booking, WhatsApp order button."],
   ];
 
   return (
@@ -245,23 +252,24 @@ function Contact() {
       <p className="eyebrow">04 / GET IN TOUCH</p>
 
       <h2>
-        Have a project
+        Got a Poster, Brand or Website you need
         <br />
-        in mind?
+        this week?
         <span> Let's talk.</span>
       </h2>
 
       <p>
-        Have an idea, a business or an upcoming event?
-        Let's create something great together.
-        Reach out through any of my platforms.
+        Don't wait till your event is tomorrow.
+        Send me your idea on WhatsApp now - I 
+        reply fast, and I'll tell you the price 
+        + how many days it will take. No long stories.  
       </p>
 
       <div className="contact-buttons">
 
         <a
           href={`https://wa.me/263784678867?text=${encodeURIComponent(
-            "Hi Emmanuel! 👋\n\nI came across your website and I'm interested in your design services.\n\nI'd like to discuss a project with you.\n\nProject type:{Enter project type here}\nBusiness/Brand name:{Enter your name Here}\nProject details:{Enter the details here}\n\nLooking forward to hearing from you!"
+            "Hi Emmanuel! 👋\n\nI came across your website and I'm interested in your design services.\n\nI'd like to discuss a project with you.\n\nProject type: {Enter project type here}\n\nBusiness/Brand name: {Enter your name Here}\n\nProject details: {Enter the details here}\n\nLooking forward to hearing from you!"
           )}`}
           target="_blank"
           rel="noreferrer"
